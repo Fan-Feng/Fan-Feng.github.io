@@ -25,17 +25,17 @@
   /* stronger white gradient for higher contrast */
   --bg-gradient-onyx: linear-gradient(
     to bottom right,
-    hsl(0, 0%, 100%) 0%,
-    hsl(0, 0%, 98%) 50%,
-    hsl(0, 0%, 96%) 100%
+    hsl(0, 0%, 95%) 0%,
+    hsl(0, 0%, 92%) 50%,
+    hsl(0, 0%, 90%) 100%
   );
 
   /* subtle overlay gradient for panels */
   --bg-gradient-jet: linear-gradient(
     to bottom right,
-    hsla(0, 0%, 99%, 0.6) 0%,
-    hsla(0, 0%, 97%, 0) 100%
-  ), hsl(0, 0%, 100%);
+    hsla(0, 0%, 92%, 0.6) 0%,
+    hsla(0, 0%, 90%, 0) 100%
+  ), hsl(0, 0%, 95%);
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right,
     hsl(150, 60%, 40%) 0%,
@@ -64,7 +64,7 @@
   /* slightly darker panel tints to separate from page white */
   --eerie-black-1: hsl(0, 0%, 98%);
   --eerie-black-2: hsl(0, 0%, 96%);
-  --smoky-black: hsl(0, 0%, 100%); /* page background */
+  --smoky-black: hsl(0, 0%, 90%); /* page background - darker for contrast */
   --white-1: hsl(150, 22%, 16%);
   /* increase contrast: darker text (keeps green hue) */
   --white-2: hsl(150, 22%, 8%); /* main text color (darker green) */
