@@ -18,56 +18,55 @@
 :root {
 
   /**
-   * colors
+   * colors (white + green scheme)
    */
 
   /* gradient */
-
   --bg-gradient-onyx: linear-gradient(
-    to bottom right, 
-    hsl(240, 1%, 25%) 3%, 
-    hsl(0, 0%, 19%) 97%
+    to bottom right,
+    hsl(150, 60%, 98%) 3%,
+    hsl(150, 60%, 96%) 97%
   );
   --bg-gradient-jet: linear-gradient(
-    to bottom right, 
-    hsla(240, 1%, 18%, 0.251) 0%, 
-    hsla(240, 2%, 11%, 0) 100%
-  ), hsl(240, 2%, 13%);
+    to bottom right,
+    hsla(150, 60%, 96%, 0.25) 0%,
+    hsla(150, 60%, 95%, 0) 100%
+  ), hsl(0, 0%, 100%);
   --bg-gradient-yellow-1: linear-gradient(
-    to bottom right, 
-    hsl(45, 100%, 71%) 0%, 
-    hsla(36, 100%, 69%, 0) 50%
+    to bottom right,
+    hsl(150, 60%, 40%) 0%,
+    hsla(150, 60%, 40%, 0) 50%
   );
   --bg-gradient-yellow-2: linear-gradient(
-    135deg, 
-    hsla(45, 100%, 71%, 0.251) 0%, 
-    hsla(35, 100%, 68%, 0) 59.86%
-  ), hsl(240, 2%, 13%);
+    135deg,
+    hsla(150, 60%, 40%, 0.25) 0%,
+    hsla(150, 55%, 45%, 0) 59.86%
+  ), hsl(0, 0%, 100%);
   --border-gradient-onyx: linear-gradient(
-    to bottom right, 
-    hsl(0, 0%, 25%) 0%, 
-    hsla(0, 0%, 25%, 0) 50%
+    to bottom right,
+    hsl(0, 0%, 95%) 0%,
+    hsla(0, 0%, 95%, 0) 50%
   );
+  /* keep the variable name to avoid changing usages */
   --text-gradient-yellow: linear-gradient(
-    to right, 
-    hsl(45, 100%, 72%), 
-    hsl(35, 100%, 68%)
+    to right,
+    hsl(150, 60%, 40%),
+    hsl(150, 55%, 48%)
   );
 
   /* solid */
-
-  --jet: hsl(0, 0%, 22%);
-  --onyx: hsl(240, 1%, 17%);
-  --eerie-black-1: hsl(240, 2%, 13%);
-  --eerie-black-2: hsl(240, 2%, 12%);
-  --smoky-black: hsl(0, 0%, 7%);
+  --jet: hsl(0, 0%, 94%); /* light border / subtle panel edge */
+  --onyx: hsl(0, 0%, 100%); /* card background (white) */
+  --eerie-black-1: hsl(0, 0%, 99%);
+  --eerie-black-2: hsl(0, 0%, 98%);
+  --smoky-black: hsl(0, 0%, 100%); /* page background */
   --white-1: hsl(0, 0%, 100%);
-  --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: hsl(45, 100%, 72%);
-  --vegas-gold: hsl(45, 54%, 58%);
-  --light-gray: hsl(0, 0%, 84%);
-  --light-gray-70: hsla(0, 0%, 84%, 0.7);
-  --bittersweet-shimmer: hsl(0, 43%, 51%);
+  --white-2: hsl(150, 22%, 12%); /* main text color (dark green) */
+  --orange-yellow-crayola: hsl(150, 60%, 40%); /* primary accent green */
+  --vegas-gold: hsl(150, 50%, 45%); /* secondary lighter green */
+  --light-gray: hsl(0, 0%, 70%);
+  --light-gray-70: hsla(0, 0%, 70%, 0.7);
+  --bittersweet-shimmer: hsl(150, 60%, 30%);
 
   /**
    * typography
@@ -95,12 +94,11 @@
   /**
    * shadow
    */
-  
-  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
-  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
-  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
-  --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
-  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.06);
+  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.06);
+  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.06);
+  --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.04);
+  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.06);
 
   /**
    * transition
@@ -148,23 +146,14 @@ input, textarea {
 
 ::selection {
   background: var(--orange-yellow-crayola);
-  color: var(--smoky-black);
+  color: var(--onyx);
 }
 
 :focus { outline-color: var(--orange-yellow-crayola); }
 
 html { font-family: var(--ff-poppins); }
 
-body { background: var(--smoky-black); }
-
-
-
-
-
-/*-----------------------------------*\
-  #REUSED STYLE
-\*-----------------------------------*/
-
+body { background: var(--smoky-black); color: var(--white-2); }
 .sidebar,
 article {
   background: var(--eerie-black-2);
@@ -174,14 +163,12 @@ article {
   box-shadow: var(--shadow-1);
   z-index: 1;
 }
-
 .separator {
   width: 100%;
   height: 1px;
   background: var(--jet);
   margin: 16px 0;
 }
-
 .icon-box {
   position: relative;
   background: var(--border-gradient-onyx);
@@ -444,7 +431,7 @@ main {
 }
 
 
-.social-item .social-link:hover { color: var(--light-gray); }
+.social-item .social-link:hover { color: var(--orange-yellow-crayola); }
 
 
 
@@ -459,7 +446,7 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: hsla(240, 1%, 17%, 0.75);
+  background: hsla(0, 0%, 100%, 0.85);
   backdrop-filter: blur(10px);
   border: 1px solid var(--jet);
   border-radius: 12px 12px 0 0;
@@ -476,14 +463,14 @@ main {
 }
 
 .navbar-link {
-  color: var(--light-gray);
+  color: var(--white-2);
   font-size: var(--fs-8);
   padding: 20px 7px;
   transition: color var(--transition-1);
 }
 
 .navbar-link:hover,
-.navbar-link:focus { color: var(--light-gray-70); }
+.navbar-link:focus { color: var(--vegas-gold); }
 
 .navbar-link.active { color: var(--orange-yellow-crayola); }
 
@@ -498,7 +485,7 @@ main {
 .about .article-title { margin-bottom: 15px; }
 
 .about-text {
-  color: var(--light-gray);
+  color: var(--white-2);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
@@ -549,7 +536,7 @@ main {
 .service-item-title { margin-bottom: 7px; }
 
 .service-item-text {
-  color: var(--light-gray);
+  color: var(--white-2);
   font-size: var(--fs-6);
   font-weight: var(--fw-3);
   line-height: 1.6;
@@ -596,7 +583,7 @@ main {
 .testimonials-item-title { margin-bottom: 7px; }
 
 .testimonials-text {
-  color: var(--light-gray);
+  color: var(--white-2);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
@@ -641,7 +628,7 @@ main {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: hsl(0, 0%, 5%);
+  background: rgba(0,0,0,0.55);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -884,7 +871,7 @@ main {
 
 .filter-select {
   background: var(--eerie-black-2);
-  color: var(--light-gray);
+  color: var(--white-2);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -930,7 +917,7 @@ main {
   border-radius: 8px;
 }
 
-.select-item button:hover { --eerie-black-2: hsl(240, 2%, 20%); }
+.select-item button:hover { --eerie-black-2: hsl(0, 0%, 96%); }
 
 .project-list {
   display: grid;
@@ -1127,7 +1114,7 @@ main {
   height: 250px;
   width: 100%;
   border-radius: 16px;
-  margin-bottom: 30px;
+  background: hsla(0, 0%, 100%, 0.85);
   border: 1px solid var(--jet);
   overflow: hidden;
 }
@@ -1138,7 +1125,6 @@ main {
   width: 100%;
   height: 100%;
   border: none;
-  filter: grayscale(1) invert(1);
 }
 
 .contact-form { margin-bottom: 10px; }
