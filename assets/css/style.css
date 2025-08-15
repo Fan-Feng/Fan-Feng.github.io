@@ -1100,6 +1100,18 @@ main {
 
 .project-item.content-strip .project-category { color: var(--light-gray); font-size: var(--fs-7); }
 
+/* Ensure publications list shows one item per row */
+article.publications .project-list {
+  grid-template-columns: 1fr !important;
+}
+
+article.publications .project-item.content-strip {
+  width: 100%;
+  display: flex; /* already set, reinforce */
+}
+
+article.publications .project-item.content-strip > a { width: 100%; }
+
 
 
 
