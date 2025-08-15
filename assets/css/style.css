@@ -22,15 +22,19 @@
    */
 
   /* gradient */
+  /* stronger white gradient for higher contrast */
   --bg-gradient-onyx: linear-gradient(
     to bottom right,
-    hsl(150, 60%, 98%) 3%,
-    hsl(150, 60%, 96%) 97%
+    hsl(0, 0%, 100%) 0%,
+    hsl(0, 0%, 98%) 50%,
+    hsl(0, 0%, 96%) 100%
   );
+
+  /* subtle overlay gradient for panels */
   --bg-gradient-jet: linear-gradient(
     to bottom right,
-    hsla(150, 60%, 96%, 0.25) 0%,
-    hsla(150, 60%, 95%, 0) 100%
+    hsla(0, 0%, 99%, 0.6) 0%,
+    hsla(0, 0%, 97%, 0) 100%
   ), hsl(0, 0%, 100%);
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right,
@@ -57,11 +61,13 @@
   /* solid */
   --jet: hsl(0, 0%, 94%); /* light border / subtle panel edge */
   --onyx: hsl(0, 0%, 100%); /* card background (white) */
-  --eerie-black-1: hsl(0, 0%, 99%);
-  --eerie-black-2: hsl(0, 0%, 98%);
+  /* slightly darker panel tints to separate from page white */
+  --eerie-black-1: hsl(0, 0%, 98%);
+  --eerie-black-2: hsl(0, 0%, 96%);
   --smoky-black: hsl(0, 0%, 100%); /* page background */
   --white-1: hsl(0, 0%, 100%);
-  --white-2: hsl(150, 22%, 12%); /* main text color (dark green) */
+  /* increase contrast: darker text (keeps green hue) */
+  --white-2: hsl(150, 22%, 8%); /* main text color (darker green) */
   --orange-yellow-crayola: hsl(150, 60%, 40%); /* primary accent green */
   --vegas-gold: hsl(150, 50%, 45%); /* secondary lighter green */
   --light-gray: hsl(0, 0%, 70%);
@@ -153,7 +159,7 @@ input, textarea {
 
 html { font-family: var(--ff-poppins); }
 
-body { background: var(--smoky-black); color: var(--white-2); }
+body { background: var(--bg-gradient-onyx); color: var(--white-2); }
 .sidebar,
 article {
   background: var(--eerie-black-2);
