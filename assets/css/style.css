@@ -1217,6 +1217,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
+
 /*-----------------------------------*\
   #RESPONSIVE
 \*-----------------------------------*/
@@ -1524,12 +1525,14 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   textarea.form-input { margin-bottom: 30px; }
 
-  .form-btn {
+  .form-btn,
+  .download-btn {
     --fs-6: 16px;
     padding: 16px 20px;
   }
 
-  .form-btn ion-icon { font-size: 18px; }
+  .form-btn ion-icon,
+  .download-btn ion-icon { font-size: 18px; }
 
 }
 
@@ -1626,7 +1629,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .input-wrapper { grid-template-columns: 1fr 1fr; }
 
-  .form-btn {
+  .form-btn,
+  .download-btn {
     width: max-content;
     margin-left: auto;
   }
