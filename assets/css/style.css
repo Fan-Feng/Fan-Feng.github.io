@@ -72,6 +72,7 @@
   --vegas-gold: hsl(150, 50%, 45%); /* secondary lighter green */
   --light-gray: hsl(0, 0%, 70%);
   --light-gray-70: hsla(0, 0%, 70%, 0.7);
+  --dark-gray: hsl(0, 0%, 60%);
   --bittersweet-shimmer: hsl(150, 60%, 30%);
 
   /**
@@ -852,7 +853,7 @@ main {
 }
 
 .timeline-text {
-  color: var(--light-gray);
+  color: var(--dark-gray);
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
