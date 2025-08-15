@@ -778,6 +778,30 @@ main {
   margin-left: 45px;
 }
 
+/* Resume timeline row: align degree left and year to the right */
+.timeline-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.timeline-left { max-width: calc(100% - 120px); }
+
+.timeline-degree {
+  color: #000; /* black degree text per request */
+  font-size: var(--fs-6);
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+
+.timeline-year {
+  color: var(--vegas-gold);
+  font-weight: var(--fw-400);
+  white-space: nowrap;
+  margin-left: 12px;
+}
+
 .timeline-item { position: relative; }
 
 .timeline-item:not(:last-child) { margin-bottom: 20px; }
