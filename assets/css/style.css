@@ -297,22 +297,6 @@ article.active {
   z-index: -1;
 }
 
-/* New: alternative strip style that can be applied alongside .content-card */
-.content-strip {
-  /* flat horizontal rows instead of cards */
-  position: relative;
-  background: transparent;
-  padding: 10px 0;
-  border-radius: 0;
-  box-shadow: none;
-  border-bottom: 1px solid var(--jet);
-  cursor: default;
-  z-index: 0;
-}
-
-.content-strip::before { display: none; }
-
-
 
 
 
