@@ -278,23 +278,19 @@ article.active {
 .has-scrollbar::-webkit-scrollbar-button { width: 20px; }
 
 .content-card {
+  /* strip appearance: flat row with bottom border */
   position: relative;
-  background: var(--border-gradient-onyx);
-  padding: 15px;
-  padding-top: 45px;
-  border-radius: 14px;
-  box-shadow: var(--shadow-2);
-  cursor: pointer;
-  z-index: 1;
+  background: transparent;
+  padding: 10px 0;
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: 1px solid var(--jet);
+  cursor: default;
+  z-index: 0;
 }
 
 .content-card::before {
-  content: "";
-  position: absolute;
-  inset: 1px;
-  background: var(--bg-gradient-jet);
-  border-radius: inherit;
-  z-index: -1;
+  display: none;
 }
 
 
