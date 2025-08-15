@@ -65,7 +65,7 @@
   --eerie-black-1: hsl(0, 0%, 98%);
   --eerie-black-2: hsl(0, 0%, 96%);
   --smoky-black: hsl(0, 0%, 100%); /* page background */
-  --white-1: hsl(0, 0%, 100%);
+  --white-1: hsl(150, 22%, 16%);
   /* increase contrast: darker text (keeps green hue) */
   --white-2: hsl(150, 22%, 8%); /* main text color (darker green) */
   --orange-yellow-crayola: hsl(150, 60%, 40%); /* primary accent green */
@@ -338,7 +338,7 @@ main {
 }
 
 .info-content .title {
-  color: var(--white-1);
+  color: var(--white-2);
   background: var(--onyx);
   font-size: var(--fs-8);
   font-weight: var(--fw-300);
