@@ -225,6 +225,17 @@ article.active {
 
 .h3 { font-size: var(--fs-2); }
 
+/* small icon before headings (inline) */
+.h3 ion-icon {
+  font-size: 18px;
+  vertical-align: -2px;
+  margin-right: 8px;
+  color: var(--orange-yellow-crayola);
+}
+
+/* specific tweak for download-cv heading if needed */
+.download-cv .h3 ion-icon { font-size: 20px; margin-right: 10px; }
+
 .h4 { font-size: var(--fs-4); }
 
 .h5 {
