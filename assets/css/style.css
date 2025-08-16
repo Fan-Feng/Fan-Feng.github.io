@@ -975,34 +975,43 @@ main {
 .select-item button:hover { --eerie-black-2: hsl(0, 0%, 96%); }
 
 .project-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.project-item { display: none; }
-
-.project-item.active {
-  display: block;
-  animation: scaleUp 0.25s ease forwards;
+.project-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
 }
 
-@keyframes scaleUp {
-  0% { transform: scale(0.5); }
-  100% { transform: scale(1); }
+.project-item a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+}
+
+/* canonical project image container */
+.project-img {
+  position: relative;
+  flex-shrink: 0;
+  width: 100px; /* reduced thumbnail for card layout */
+  height: 100px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-1);
 }
 
 .project-item > a { width: 100%; }
-
-.project-img {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  border-radius: 16px;
-  overflow: hidden;
-  margin-bottom: 15px;
-}
 
 .project-img::before {
   content: "";
@@ -1042,13 +1051,6 @@ main {
 
 .project-item-icon-box ion-icon { --ionicon-stroke-width: 50px; }
 
-.project-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: var(--transition-1);
-}
-
 .project-item > a:hover img { transform: scale(1.1); }
 
 .project-title,
@@ -1078,11 +1080,11 @@ main {
 }
 
 .project-item.content-strip .project-img {
-  width: 120px;
-  height: 80px;
-  border-radius: 10px;
+  width: 80px;
+  height: 50px;
+  border-radius: 8px;
   margin-bottom: 0;
-  flex: 0 0 120px;
+  flex: 0 0 80px;
 }
 
 .project-item.content-strip .project-img img {
@@ -1968,4 +1970,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+
+/* Add a specific style for all images in the projects section */
+.projects .project-item img {
+  width: 10px;
+  height: auto;
 }
