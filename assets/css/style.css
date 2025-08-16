@@ -1117,18 +1117,18 @@ article.publications .project-item.content-strip > a { width: 100%; }
 
 
 /*-----------------------------------*\
-  #BLOG
+  #PUBLICATION
 \*-----------------------------------*/
 
-.blog-posts { margin-bottom: 10px; }
+.publication-posts { margin-bottom: 10px; }
 
-.blog-posts-list {
+.publication-posts-list {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
 }
 
-.blog-post-item > a {
+.publication-post-item > a {
   position: relative;
   background: var(--border-gradient-onyx);
   height: 100%;
@@ -1137,7 +1137,7 @@ article.publications .project-item.content-strip > a { width: 100%; }
   z-index: 1;
 }
 
-.blog-post-item > a::before {
+.publication-post-item > a::before {
   content: "";
   position: absolute;
   inset: 1px;
@@ -1146,25 +1146,25 @@ article.publications .project-item.content-strip > a { width: 100%; }
   z-index: -1;
 }
 
-.blog-banner-box {
+.publication-banner-box {
   width: 100%;
   height: 200px;
   border-radius: 12px;
   overflow: hidden;
 }
 
-.blog-banner-box img {
+.publication-banner-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: var(--transition-1);
 }
 
-.blog-post-item > a:hover .blog-banner-box img { transform: scale(1.1); }
+.publication-post-item > a:hover .publication-banner-box img { transform: scale(1.1); }
 
-.blog-content { padding: 15px; }
+.publication-content { padding: 15px; }
 
-.blog-meta {
+.publication-meta {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1172,28 +1172,28 @@ article.publications .project-item.content-strip > a { width: 100%; }
   margin-bottom: 10px;
 }
 
-.blog-meta :is(.blog-category, time) {
+.publication-meta :is(.publication-category, time) {
   color: var(--light-gray-70);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
 }
 
-.blog-meta .dot {
+.publication-meta .dot {
   background: var(--light-gray-70);
   width: 4px;
   height: 4px;
   border-radius: 4px;
 }
 
-.blog-item-title {
+.publication-item-title {
   margin-bottom: 10px;
   line-height: 1.3;
   transition: var(--transition-1);
 }
 
-.blog-post-item > a:hover .blog-item-title { color: var(--orange-yellow-crayola); }
+.publication-post-item > a:hover .publication-item-title { color: var(--orange-yellow-crayola); }
 
-.blog-text {
+.publication-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
