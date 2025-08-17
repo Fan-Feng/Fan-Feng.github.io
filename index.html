@@ -184,7 +184,7 @@
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
+            <button class="navbar-link" data-nav-link>Publications</button>
           </li>
 
           <li class="navbar-item">
@@ -611,35 +611,6 @@
 
           <div class="skills-groups" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
 
-            <!-- Design Skills group -->
-            <div class="skills-group">
-              <h4 class="h4 skills-subtitle">Language</h4>
-
-              <ul class="skills-list content-card">
-
-                <li class="skills-item">
-                  <div class="title-wrapper">
-                    <h5 class="h5">English</h5>
-                    <data value="80">80%</data>
-                  </div>
-                  <div class="skill-progress-bg">
-                    <div class="skill-progress-fill" style="width: 80%;"></div>
-                  </div>
-                </li>
-
-                <li class="skills-item">
-                  <div class="title-wrapper">
-                    <h5 class="h5">Mandarin</h5>
-                    <data value="100">100%</data>
-                  </div>
-                  <div class="skill-progress-bg">
-                    <div class="skill-progress-fill" style="width: 100%;"></div>
-                  </div>
-
-                </li>
-              </ul>
-            </div>
-
             <!-- Building simulation group -->
             <div class="skills-group">
               <h4 class="h4 skills-subtitle">Building simulation</h4>
@@ -684,6 +655,82 @@
                   </div>
                 </li>
 
+              </ul>
+            </div>
+
+           <!-- Programming group -->
+            <div class="skills-group">
+              <h4 class="h4 skills-subtitle">Program</h4>
+
+              <ul class="skills-list content-card">
+
+                <li class="skills-item">
+
+                  <div class="title-wrapper">
+                    <h5 class="h5">Python</h5>
+                    <data value="100">100%</data>
+                  </div>
+
+                  <div class="skill-progress-bg">
+                    <div class="skill-progress-fill" style="width: 100%;"></div>
+                  </div>
+
+                </li>
+
+                
+                <li class="skills-item">
+
+                  <div class="title-wrapper">
+                    <h5 class="h5">R</h5>
+                    <data value="80">80%</data>
+                  </div>
+
+                  <div class="skill-progress-bg">
+                    <div class="skill-progress-fill" style="width: 80%;"></div>
+                  </div>
+
+                </li>
+
+                <li class="skills-item">
+                  <div class="title-wrapper">
+                    <h5 class="h5">Matlab</h5>
+                    <data value="80">80%</data>
+                  </div>
+
+                  <div class="skill-progress-bg">
+                    <div class="skill-progress-fill" style="width: 80%;"></div>
+                  </div>
+                </li>
+
+              </ul>
+            </div>    
+            
+                        <!-- Design Skills group -->
+            <div class="skills-group">
+              <h4 class="h4 skills-subtitle">Language</h4>
+
+              <ul class="skills-list content-card">
+
+                <li class="skills-item">
+                  <div class="title-wrapper">
+                    <h5 class="h5">English</h5>
+                    <data value="80">80%</data>
+                  </div>
+                  <div class="skill-progress-bg">
+                    <div class="skill-progress-fill" style="width: 80%;"></div>
+                  </div>
+                </li>
+
+                <li class="skills-item">
+                  <div class="title-wrapper">
+                    <h5 class="h5">Mandarin</h5>
+                    <data value="100">100%</data>
+                  </div>
+                  <div class="skill-progress-bg">
+                    <div class="skill-progress-fill" style="width: 100%;"></div>
+                  </div>
+
+                </li>
               </ul>
             </div>
 
@@ -921,10 +968,10 @@
         - #BLOG
       -->
 
-  <article class="blog" data-page="blog">
+  <article class="publications" data-page="publications">
 
         <header>
-          <h2 class="h2 article-title">Blog</h2>
+          <h2 class="h2 article-title">Publications</h2>
         </header>
 
         <section class="blog-posts">
@@ -932,170 +979,80 @@
           <ul class="blog-posts-list">
 
             <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
+              <a href="#" class="publication-row">
+                <div class="pub-left">
+                  <span class="pub-title">Design conferences in 2022</span>
+                  <span class="pub-authors">B. Dong, V. Prakash, F. Feng, Z. O'Neill — Energy and Buildings 199, 29-46</span>
                 </div>
-
+                <div class="pub-right">
+                  <span class="pub-count"></span>
+                  <span class="pub-year">2022</span>
+                </div>
               </a>
             </li>
 
             <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
+              <a href="#" class="publication-row">
+                <div class="pub-left">
+                  <span class="pub-title">Best fonts every designer</span>
+                  <span class="pub-authors">F. Feng, N. Kunwar, K. Cetin, Z. O'Neill — Energy and Buildings 248, 111184</span>
                 </div>
-
+                <div class="pub-right">
+                  <span class="pub-count"></span>
+                  <span class="pub-year">2022</span>
+                </div>
               </a>
             </li>
 
             <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
+              <a href="#" class="publication-row">
+                <div class="pub-left">
+                  <span class="pub-title">Design digest #80</span>
+                  <span class="pub-authors">Author names — Journal / Details</span>
                 </div>
-
+                <div class="pub-right">
+                  <span class="pub-count"></span>
+                  <span class="pub-year">2022</span>
+                </div>
               </a>
             </li>
 
             <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
+              <a href="#" class="publication-row">
+                <div class="pub-left">
+                  <span class="pub-title">UI interactions of the week</span>
+                  <span class="pub-authors">Author names — Journal / Details</span>
                 </div>
-
+                <div class="pub-right">
+                  <span class="pub-count"></span>
+                  <span class="pub-year">2022</span>
+                </div>
               </a>
             </li>
 
             <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
+              <a href="#" class="publication-row">
+                <div class="pub-left">
+                  <span class="pub-title">The forgotten art of spacing</span>
+                  <span class="pub-authors">Author names — Journal / Details</span>
                 </div>
-
+                <div class="pub-right">
+                  <span class="pub-count"></span>
+                  <span class="pub-year">2022</span>
+                </div>
               </a>
             </li>
 
             <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
+              <a href="#" class="publication-row">
+                <div class="pub-left">
+                  <span class="pub-title">Design digest #79</span>
+                  <span class="pub-authors">Author names — Journal / Details</span>
                 </div>
-
+                <div class="pub-right">
+                  <span class="pub-count"></span>
+                  <span class="pub-year">2022</span>
+                </div>
               </a>
             </li>
 
