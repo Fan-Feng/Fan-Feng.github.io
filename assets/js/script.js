@@ -161,27 +161,37 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 // Publications are rendered statically from index.html. CSV renderer removed per request.
 
-// Sort publications by year with toggle behavior: if currently all-desc then sort asc,
-// if all-asc then sort desc, otherwise default to desc.
+// Publication year parsing helper (empty/non-number => very small)
+const parseYearFromLi = (li) => {
+  const yEl = li.querySelector('.pub-year');
+  if (!yEl) return Number.NEGATIVE_INFINITY;
+  const txt = yEl.textContent.trim();
+  const n = parseInt(txt, 10);
+  return Number.isNaN(n) ? Number.NEGATIVE_INFINITY : n;
+};
+
+// Sort the publication list; descending=true sorts newest-first
+const sortPublications = (descending = true) => {
+  const list = document.querySelector('.blog-posts-list');
+  if (!list) return;
+  const items = Array.from(list.querySelectorAll('li.blog-post-item'));
+  items.sort((a, b) => {
+    const ya = parseYearFromLi(a);
+    const yb = parseYearFromLi(b);
+    return descending ? yb - ya : ya - yb;
+  });
+  items.forEach(i => list.appendChild(i));
+};
+
+// Wire the Year button to toggle sort order based on current state
 const sortYearBtn = document.getElementById('sort-year-btn');
 if (sortYearBtn) {
   sortYearBtn.addEventListener('click', function () {
     const list = document.querySelector('.blog-posts-list');
     if (!list) return;
 
-    // get all li items
     const items = Array.from(list.querySelectorAll('li.blog-post-item'));
-
-    // parse year from .pub-year (empty or non-number => very small)
-    const parseYear = (el) => {
-      const yEl = el.querySelector('.pub-year');
-      if (!yEl) return Number.NEGATIVE_INFINITY;
-      const txt = yEl.textContent.trim();
-      const n = parseInt(txt, 10);
-      return Number.isNaN(n) ? Number.NEGATIVE_INFINITY : n;
-    };
-
-    const years = items.map(parseYear);
+    const years = items.map(parseYearFromLi);
 
     const isSortedDesc = (arr) => {
       for (let i = 0; i < arr.length - 1; i++) {
@@ -198,27 +208,16 @@ if (sortYearBtn) {
     };
 
     let descending = true; // default
+    if (isSortedDesc(years)) descending = false; // switch to ascending
+    else if (isSortedAsc(years)) descending = true; // switch to descending
+    else descending = true; // default to descending if unsorted/mixed
 
-    if (isSortedDesc(years)) {
-      descending = false; // switch to ascending
-    } else if (isSortedAsc(years)) {
-      descending = true; // switch to descending
-    } else {
-      descending = true; // default to descending if unsorted/mixed
-    }
-
-    // perform sort according to descending flag
-    items.sort((a, b) => {
-      const ya = parseYear(a);
-      const yb = parseYear(b);
-      return descending ? yb - ya : ya - yb;
-    });
-
-    // re-append in new order
-    items.forEach(i => list.appendChild(i));
-
+    sortPublications(descending);
   });
 }
+
+// Default: sort publications by year descending on page load
+sortPublications(true);
 
 // Publication type filters (Conference / Journal / Others)
 const pubFilterBtns = document.querySelectorAll('.pub-filter-btn');
