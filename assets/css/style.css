@@ -1153,6 +1153,13 @@ main {
   border-left: 1px solid var(--jet);
 }
 
+.projects-controls {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
 .project-title-row {
   display: flex;
   align-items: baseline;
@@ -1805,6 +1812,19 @@ textarea.form-input::-webkit-resizer { display: none; }
   .filter-item button:hover { color: var(--light-gray-70); }
 
   .filter-item button.active { color: var(--orange-yellow-crayola); }
+
+  /* Year button in filter list: use green accent */
+  .filter-item #sort-project-year-btn {
+    color: var(--orange-yellow-crayola);
+    font-size: var(--fs-5);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  /* push the last filter item (year button) to the right */
+  .filter-list .filter-item:last-child {
+    margin-left: auto;
+  }
 
   /* portfolio and blog grid */
 

@@ -264,3 +264,56 @@ if (pubFilterBtns && pubFilterBtns.length) {
   }
 
 }
+
+
+// Projects: sort by .project-year inside .project-item
+const parseProjectYear = (li) => {
+  const yEl = li.querySelector('.project-year');
+  if (!yEl) return Number.NEGATIVE_INFINITY;
+  const txt = yEl.textContent.trim();
+  const n = parseInt(txt, 10);
+  return Number.isNaN(n) ? Number.NEGATIVE_INFINITY : n;
+};
+
+const sortProjectsByYear = (descending = true) => {
+  const list = document.querySelector('.project-list');
+  if (!list) return;
+  const items = Array.from(list.querySelectorAll('li.project-item'));
+  items.sort((a, b) => {
+    const ya = parseProjectYear(a);
+    const yb = parseProjectYear(b);
+    return descending ? yb - ya : ya - yb;
+  });
+  items.forEach(i => list.appendChild(i));
+};
+
+const sortProjectYearBtn = document.getElementById('sort-project-year-btn');
+if (sortProjectYearBtn) {
+  sortProjectYearBtn.addEventListener('click', function () {
+    const list = document.querySelector('.project-list');
+    if (!list) return;
+    const items = Array.from(list.querySelectorAll('li.project-item'));
+    const years = items.map(parseProjectYear);
+
+    const isSortedDesc = (arr) => {
+      for (let i = 0; i < arr.length - 1; i++) {
+        if (arr[i] < arr[i + 1]) return false;
+      }
+      return true;
+    };
+
+    const isSortedAsc = (arr) => {
+      for (let i = 0; i < arr.length - 1; i++) {
+        if (arr[i] > arr[i + 1]) return false;
+      }
+      return true;
+    };
+
+    let descending = true;
+    if (isSortedDesc(years)) descending = false;
+    else if (isSortedAsc(years)) descending = true;
+    else descending = true;
+
+    sortProjectsByYear(descending);
+  });
+}
