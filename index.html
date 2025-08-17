@@ -233,12 +233,12 @@
 
           <h3 class="h3">Download CV</h3>
 
-          <div class="download-row" style="display:flex;flex-direction:row;align-items:center;gap:.75rem;flex-wrap:wrap;">
-            <p class="download-text" style="margin:0;">
+          <div class="download-row">
+            <p class="download-text">
               If you'd like a copy of my CV, download it (PDF, Last update: August 2025).
             </p>
 
-            <a href="./assets/files/CV_2025_Fan.pdf" class="btn download-btn" download aria-label="Download CV" style="display:inline-flex;align-items:center;gap:.5rem;">
+            <a href="./assets/files/CV_2025_Fan.pdf" class="btn download-btn" download aria-label="Download CV">
               <ion-icon name="cloud-download-outline"></ion-icon>
               <span>Download CV (PDF)</span>
             </a>
@@ -615,7 +615,7 @@
 
           <h3 class="h3 skills-title">My skills</h3>
 
-          <div class="skills-groups" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+          <div class="skills-groups">
 
             <!-- Building simulation group -->
             <div class="skills-group">
@@ -631,7 +631,7 @@
                   </div>
 
                   <div class="skill-progress-bg">
-                    <div class="skill-progress-fill" style="width: 100%;"></div>
+                    <div class="skill-progress-fill w-100"></div>
                   </div>
 
                 </li>
@@ -645,7 +645,7 @@
                   </div>
 
                   <div class="skill-progress-bg">
-                    <div class="skill-progress-fill" style="width: 80%;"></div>
+                    <div class="skill-progress-fill w-80"></div>
                   </div>
 
                 </li>
@@ -657,7 +657,7 @@
                   </div>
 
                   <div class="skill-progress-bg">
-                    <div class="skill-progress-fill" style="width: 80%;"></div>
+                    <div class="skill-progress-fill w-80"></div>
                   </div>
                 </li>
 
@@ -678,7 +678,7 @@
                   </div>
 
                   <div class="skill-progress-bg">
-                    <div class="skill-progress-fill" style="width: 100%;"></div>
+                    <div class="skill-progress-fill w-100"></div>
                   </div>
 
                 </li>
@@ -692,7 +692,7 @@
                   </div>
 
                   <div class="skill-progress-bg">
-                    <div class="skill-progress-fill" style="width: 80%;"></div>
+                    <div class="skill-progress-fill w-80"></div>
                   </div>
 
                 </li>
@@ -704,7 +704,7 @@
                   </div>
 
                   <div class="skill-progress-bg">
-                    <div class="skill-progress-fill" style="width: 80%;"></div>
+                    <div class="skill-progress-fill w-80"></div>
                   </div>
                 </li>
 
@@ -723,7 +723,7 @@
                     <data value="80">80%</data>
                   </div>
                   <div class="skill-progress-bg">
-                    <div class="skill-progress-fill" style="width: 80%;"></div>
+                    <div class="skill-progress-fill w-80"></div>
                   </div>
                 </li>
 
@@ -733,7 +733,7 @@
                     <data value="100">100%</data>
                   </div>
                   <div class="skill-progress-bg">
-                    <div class="skill-progress-fill" style="width: 100%;"></div>
+                    <div class="skill-progress-fill w-100"></div>
                   </div>
 
                 </li>
@@ -980,8 +980,16 @@
           <h2 class="h2 article-title">Publications</h2>
         </header>
 
-        <div class="publications-controls" style="display:flex;justify-content:flex-end;margin-bottom:0.75rem;">
-          <button id="sort-year-btn" class="btn" style="background-color:#28a745;border-color:#28a745;color:#ffffff;">Year</button>
+        <div class="publications-controls">
+          <div class="pub-filter-left">
+            <button class="btn pub-filter-btn" data-pub-filter="all">All</button>
+            <button class="btn pub-filter-btn" data-pub-filter="conference">Conference</button>
+            <button class="btn pub-filter-btn" data-pub-filter="journal">Journal</button>
+            <button class="btn pub-filter-btn" data-pub-filter="others">Others</button>
+          </div>
+          <div class="pub-filter-right">
+            <button id="sort-year-btn" class="btn sort-year-btn">Year</button>
+          </div>
         </div>
 
         <section class="blog-posts">

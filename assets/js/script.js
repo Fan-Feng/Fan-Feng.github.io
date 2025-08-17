@@ -161,7 +161,8 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 // Publications are rendered statically from index.html. CSV renderer removed per request.
 
-// Sort publications by year (descending) when the Year button is clicked
+// Sort publications by year with toggle behavior: if currently all-desc then sort asc,
+// if all-asc then sort desc, otherwise default to desc.
 const sortYearBtn = document.getElementById('sort-year-btn');
 if (sortYearBtn) {
   sortYearBtn.addEventListener('click', function () {
@@ -180,10 +181,87 @@ if (sortYearBtn) {
       return Number.isNaN(n) ? Number.NEGATIVE_INFINITY : n;
     };
 
-    // sort descending
-    items.sort((a, b) => parseYear(b) - parseYear(a));
+    const years = items.map(parseYear);
+
+    const isSortedDesc = (arr) => {
+      for (let i = 0; i < arr.length - 1; i++) {
+        if (arr[i] < arr[i + 1]) return false;
+      }
+      return true;
+    };
+
+    const isSortedAsc = (arr) => {
+      for (let i = 0; i < arr.length - 1; i++) {
+        if (arr[i] > arr[i + 1]) return false;
+      }
+      return true;
+    };
+
+    let descending = true; // default
+
+    if (isSortedDesc(years)) {
+      descending = false; // switch to ascending
+    } else if (isSortedAsc(years)) {
+      descending = true; // switch to descending
+    } else {
+      descending = true; // default to descending if unsorted/mixed
+    }
+
+    // perform sort according to descending flag
+    items.sort((a, b) => {
+      const ya = parseYear(a);
+      const yb = parseYear(b);
+      return descending ? yb - ya : ya - yb;
+    });
 
     // re-append in new order
     items.forEach(i => list.appendChild(i));
+
   });
+}
+
+// Publication type filters (Conference / Journal / Others)
+const pubFilterBtns = document.querySelectorAll('.pub-filter-btn');
+if (pubFilterBtns && pubFilterBtns.length) {
+  const list = document.querySelector('.blog-posts-list');
+  const items = Array.from(document.querySelectorAll('li.blog-post-item'));
+
+  const getType = (li) => {
+    const t = li.querySelector('.pub-tag.pub-type');
+    if (!t) return '';
+    return t.textContent.trim().toLowerCase();
+  };
+
+  const applyFilter = (filter) => {
+    items.forEach(li => {
+      const type = getType(li);
+      if (!filter || filter === 'all') {
+        li.style.display = '';
+      } else if (filter === 'others') {
+        if (type !== 'conference' && type !== 'journal') li.style.display = '';
+        else li.style.display = 'none';
+      } else {
+        li.style.display = (type === filter) ? '' : 'none';
+      }
+    });
+  };
+
+  pubFilterBtns.forEach(btn => {
+    btn.addEventListener('click', function () {
+      // toggle active class, but ensure only one active
+      pubFilterBtns.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+
+      const f = this.dataset.pubFilter;
+      applyFilter(f);
+    });
+  });
+
+  // set 'All' as default active filter on load
+  const allBtn = Array.from(pubFilterBtns).find(b => b.dataset.pubFilter === 'all');
+  if (allBtn) {
+    allBtn.classList.add('active');
+    applyFilter('all');
+  }
+
 }
