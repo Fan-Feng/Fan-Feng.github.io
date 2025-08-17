@@ -157,3 +157,33 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+// Publications are rendered statically from index.html. CSV renderer removed per request.
+
+// Sort publications by year (descending) when the Year button is clicked
+const sortYearBtn = document.getElementById('sort-year-btn');
+if (sortYearBtn) {
+  sortYearBtn.addEventListener('click', function () {
+    const list = document.querySelector('.blog-posts-list');
+    if (!list) return;
+
+    // get all li items
+    const items = Array.from(list.querySelectorAll('li.blog-post-item'));
+
+    // parse year from .pub-year (empty or non-number => very small)
+    const parseYear = (el) => {
+      const yEl = el.querySelector('.pub-year');
+      if (!yEl) return Number.NEGATIVE_INFINITY;
+      const txt = yEl.textContent.trim();
+      const n = parseInt(txt, 10);
+      return Number.isNaN(n) ? Number.NEGATIVE_INFINITY : n;
+    };
+
+    // sort descending
+    items.sort((a, b) => parseYear(b) - parseYear(a));
+
+    // re-append in new order
+    items.forEach(i => list.appendChild(i));
+  });
+}

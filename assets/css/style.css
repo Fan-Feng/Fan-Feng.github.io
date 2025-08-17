@@ -1137,7 +1137,8 @@ article.publications .project-item.content-strip > a { width: 100%; }
 /* Publications list: compact text-only rows with left dot and right fields */
 .publication-row {
   display: flex;
-  align-items: center;
+  /* align to top so right column can be aligned with the first line of the title */
+  align-items: flex-start;
   justify-content: space-between;
   gap: 1rem;
   padding: 12px 16px;
@@ -1157,34 +1158,51 @@ article.publications .project-item.content-strip > a { width: 100%; }
 .publication-row .pub-title {
   font-weight: 500;
   color: var(--text-color);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  /* consistent line-height used to align the year with the first line */
+  line-height: 1.2;
+  /* reduce title size slightly */
+  font-size: var(--fs-5);
 }
 
 .publication-row .pub-authors {
   color: var(--light-gray-70);
   font-size: var(--fs-6);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
 }
 
 .publication-row .pub-right {
   display: flex;
-  align-items: center;
+  /* keep right column aligned to the top of the row */
+  align-items: flex-start;
   gap: 1.5rem;
   flex-shrink: 0;
 }
-
-.publication-row .pub-count {
-  color: #2e2e90; /* blue-ish for count */
-  font-weight: 600;
-}
-
 .publication-row .pub-year {
   color: var(--text-color);
+  /* nudge year so it centers with the first line of the title (uses the title's line-height) */
+  line-height: 1;
+  margin-top: calc((1.2em - 1em) / 2);
+  /* slightly smaller year to match reduced title size */
+  font-size: var(--fs-5);
 }
+
+/* publisher text shown under authors in the left column */
+.publication-row .pub-publisher {
+  color: var(--light-gray-70);
+  font-size: var(--fs-7);
+  margin-top: 2px;
+}
+
+/* small tag badges above title (pub-type, keywords) */
+.pub-tags { display: flex; gap: 8px; align-items: center; margin-bottom: 6px; flex-wrap: wrap; }
+.pub-tag { display: inline-block; padding: 4px 8px; border-radius: 999px; font-size: 12px; background: rgba(0,0,0,0.05); color: var(--text-color); }
+.pub-tag.pub-type { background: var(--orange-yellow-crayola); color: white; }
+.pub-tag.pub-keyword { background: rgba(0,0,0,0.04); color: var(--light-gray-70); }
 
 /* solid dot on the far left */
 .blog-posts-list { list-style: none; padding: 0; margin: 0; }
