@@ -332,15 +332,15 @@ document.addEventListener('DOMContentLoaded', function () {
     w.addEventListener('click', function (e) {
       const anchor = e.target.closest('a');
       if (anchor && w.contains(anchor) && anchor !== w) return; // let inner <a> handle it
-      const href = w.getAttribute('data-href');
-      if (href) window.open(href, '_blank');
+  const href = w.getAttribute('data-href');
+  if (href) window.location.href = href;
     });
 
     // keyboard accessibility: Enter activates
     w.addEventListener('keydown', function (e) {
       if (e.key === 'Enter') {
         const href = w.getAttribute('data-href');
-        if (href) window.open(href, '_blank');
+        if (href) window.location.href = href;
       }
     });
   });
