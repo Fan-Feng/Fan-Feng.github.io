@@ -80,14 +80,29 @@ const filterItems = document.querySelectorAll("[data-filter-item]");
 
 const filterFunc = function (selectedValue) {
 
+  // normalize incoming filter value (string -> lowercase trimmed)
+  const sel = (typeof selectedValue === 'string') ? selectedValue.toLowerCase().trim() : '';
+
   for (let i = 0; i < filterItems.length; i++) {
 
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
+    // normalize the item's category attribute for a case-insensitive compare
+    const itemCategory = (filterItems[i].dataset.category || '').toLowerCase().trim();
+
+    if (sel === 'all' || sel === '') {
+      filterItems[i].classList.add('active');
+
+    } else if (sel === 'others') {
+      // 'others' shows items that are not building or ai (and not empty)
+      if (itemCategory && itemCategory !== 'building' && itemCategory !== 'ai') {
+        filterItems[i].classList.add('active');
+      } else {
+        filterItems[i].classList.remove('active');
+      }
+
+    } else if (sel === itemCategory) {
+      filterItems[i].classList.add('active');
     } else {
-      filterItems[i].classList.remove("active");
+      filterItems[i].classList.remove('active');
     }
 
   }
@@ -101,13 +116,15 @@ for (let i = 0; i < filterBtn.length; i++) {
 
   filterBtn[i].addEventListener("click", function () {
 
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    filterFunc(selectedValue);
+  // normalize button label and use it as the filter key
+  const btnText = this.innerText || '';
+  const selectedValue = btnText.toLowerCase().trim();
+  selectValue.innerText = this.innerText;
+  filterFunc(selectedValue);
 
-    lastClickedBtn.classList.remove("active");
-    this.classList.add("active");
-    lastClickedBtn = this;
+  lastClickedBtn.classList.remove('active');
+  this.classList.add('active');
+  lastClickedBtn = this;
 
   });
 

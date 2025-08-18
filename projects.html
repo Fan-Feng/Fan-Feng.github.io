@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projects — Fan Feng</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <main>
+    <a href="./index.html">← Back</a>
+
+    <!-- Projects content copied from index.html -->
+    <article class="projects" data-page="projects">
+      <header>
+        <h2 class="h2 article-title">Projects</h2>
+      </header>
+      <section class="projects">
+
+        <ul class="filter-list">
+
+          <li class="filter-item">
+            <button class="active" data-filter-btn>All</button>
+          </li>
+
+          <li class="filter-item">
+            <button data-filter-btn>Building</button>
+          </li>
+
+          <li class="filter-item">
+            <button data-filter-btn>AI</button>
+          </li>
+
+          <li class="filter-item">
+            <button data-filter-btn>Others</button>
+          </li>
+
+          <li class="filter-item">
+            <button id="sort-project-year-btn" class="btn">Start year</button>
+          </li>
+
+        </ul>
+
+        <div class="filter-select-box">
+
+          <button class="filter-select" data-select>
+
+            <div class="select-value" data-selecct-value>Select category</div>
+
+            <div class="select-icon">
+              <ion-icon name="chevron-down"></ion-icon>
+            </div>
+
+          </button>
+
+          <ul class="select-list">
+
+            <li class="select-item">
+              <button data-select-item>All</button>
+            </li>
+
+            <li class="select-item">
+              <button data-select-item>Web design</button>
+            </li>
+
+            <li class="select-item">
+              <button data-select-item>Applications</button>
+            </li>
+
+            <li class="select-item">
+              <button data-select-item>Web development</button>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <ul class="project-list">
+
+         <li class="project-item active content-strip" data-filter-item data-category="Building">
+            <div class="project-link-wrap" data-href="./projects/rescode.html" tabindex="0">
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+                <img src="./assets/images/ResCodeAnalysis.png" alt="Building energy " loading="lazy">
+              </figure>
+
+              <div class="project-content">
+                <div class="project-title-row">
+                  <h3 class="project-title">Large Scale Simulation Helps States and Utilities Enhancing Building Energy Code Adoption</h3>
+                  <span class="project-year">2025</span>
+                </div>
+                <p class="project-description">
+                    "I am one of the main contributors to the Residential Building Energy Code analysis programs, 
+                    where I helped develop the simulation infrastructure used for large-scale building energy analysis 
+                    at both the state and national levels. Specficially, the simulation program we used are mainly EnergyPlus, and 
+                    we developed a workflow that can atumatically generate simulation models for different modeling parameters(building types, insulation levels
+                    ),climate zones, and etc. The large scale simulation are then executed using High Performance Computers. "
+                </p>
+                <div class="pub-tags">
+                  <span class="pub-tag pub-keyword">Building</span>
+                  <span class="pub-tag pub-keyword">EnergyPlus</span>
+                  <span class="pub-tag pub-keyword">High Performance Computing</span>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="project-item active content-strip" data-filter-item data-category="Building">
+            <div class="project-link-wrap" data-href="./projects/pcm.html" tabindex="0">
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+                <img src="./assets/images/PCM_CoolingSys.png" alt="PCM" loading="lazy">
+              </figure>
+
+              <div class="project-content">
+                <div class="project-title-row">
+                  <h3 class="project-title">Cost-effective Thermally Activated Building Systems with PCM embeded radiant cooling systems to Support a Power Grid System</h3>
+                  <span class="project-year">2022</span>
+                </div>
+                <p class="project-description">
+                  (1) Design a multi-functional building envelope with both phase change materials (PCM) and a radiant heat/cooling system.
+                  (2) Develop and implement a simulation module for industrial-grade PCMs in EnergyPlus.
+                  (3) Develop control-oriented models for energy and thermal estimation of buildings using this multi-functional panel.
+                  (4) Develop a model-predictive control framework for this system to optimize cost and thermal comfort.
+                  (5) Implement the proposed control framework using high-performance computers.
+                </p>
+                <div class="pub-tags">
+                  <span class="pub-tag pub-keyword">Phase Change Material</span>
+                  <span class="pub-tag pub-keyword">Data-driven models</span>
+                  <span class="pub-tag pub-keyword">High Performance Computing</span>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="project-item active content-strip" data-filter-item data-category="web development">
+            <div class="project-link-wrap" data-href="./projects/demo1.html" tabindex="0">
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+                <img src="./assets/images/Demo1.png" alt="web development" loading="lazy">
+              </figure>
+
+              <div class="project-content">
+                <div class="project-title-row">
+                  <h3 class="project-title">Fan Feng's personal website</h3>
+                  <span class="project-year">2025</span>
+                </div>
+                <p class="project-description">
+                  This is my personal website, and it is redesigned based on  vCard's personl portfolio (https://codewithsadee.github.io/vcard-personal-portfolio/). You are also welcome to use this template.
+                </p>
+                <div class="pub-tags">
+                  <span class="pub-tag pub-keyword">Web development</span>
+                  <span class="pub-tag pub-keyword">CSS</span>
+                  <span class="pub-tag pub-keyword">Javascript</span>
+                </div>
+                <a class="project-subpaper-link" href="./projects/demo1.html" aria-label="Project details">Project details</a>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+
+      </section>
+    </article>
+
+  </main>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
