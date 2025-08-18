@@ -1,407 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <!--
   - #Feature plans
   - # create a network list for all my collaboratrs...
 -->
 
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fan Feng - Personal Website</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fan Feng - Personal Website</title>
 
-  <!--
+    <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/icons/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/images/icons/logo.png" type="image/x-icon" />
 
-  <!--
+    <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
-  <!--
+    <!--
     - google links:
     1) icon links: https://fonts.google.com/icons
     2) font links:
   -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-
-  <!--
+    <!--
     - #MAIN
   -->
-  <main>
-
-    <!--
+    <main>
+        <!--
       - #SIDEBAR
     -->
 
-    <aside class="sidebar" data-sidebar>
+        <aside class="sidebar" data-sidebar>
+            <div class="sidebar-info">
+                <figure class="avatar-box">
+                    <img src="./assets/images/Fan/selfie3.png" alt="Fan Feng" width="80" />
+                </figure>
 
-      <div class="sidebar-info">
+                <div class="info-content">
+                    <h1 class="name" title="Fan Feng">Fan Feng</h1>
 
-        <figure class="avatar-box">
-          <img src="./assets/images/Fan/selfie3.png" alt="Fan Feng" width="80">
-        </figure>
+                    <p class="title">Research scientist</p>
+                </div>
 
-        <div class="info-content">
-          <h1 class="name" title="Fan Feng">Fan Feng</h1>
+                <button class="info_more-btn" data-sidebar-btn>
+                    <span>Show Contacts</span>
 
-          <p class="title">Research scientist</p>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
+                    <ion-icon name="chevron-down"></ion-icon>
+                </button>
             </div>
 
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
+            <div class="sidebar-info_more">
+                <div class="separator"></div>
 
-              <a href="mailto:fengfan6696@gmail.com" class="contact-link">fengfan6696@gmail.com</a>
+                <ul class="contacts-list">
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Email</p>
+
+                            <a href="mailto:fengfan6696@gmail.com" class="contact-link">fengfan6696@gmail.com</a>
+                        </div>
+                    </li>
+
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Phone</p>
+
+                            <a href="tel:+12133522795" class="contact-link">+1 (205) 765-8665</a>
+                        </div>
+                    </li>
+
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Birthday</p>
+
+                            <time datetime="1993-12-26">Dec. 26, 1993</time>
+                        </div>
+                    </li>
+
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Location</p>
+
+                            <address>Richland,WA, USA</address>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="separator"></div>
+
+                <ul class="social-list">
+                    <li class="social-item">
+                        <a href="https://scholar.google.com/citations?user=rLDZ8cwAAAAJ&hl=en&oi=ao"
+                            class="social-link">
+                            <i class="fa-brands fa-google-scholar"></i>
+                        </a>
+                    </li>
+
+                    <li class="social-item">
+                        <a href="https://github.com/Fan-Feng" class="social-link" aria-label="GitHub">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li class="social-item">
+                        <a href="https://www.linkedin.com/in/fan-feng-004028180/" class="social-link"
+                            aria-label="LinkedIn">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
             </div>
+        </aside>
 
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+12133522795" class="contact-link">+1 (205) 765-8665</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1993-12-26">Dec. 26, 1993</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Richland,WA, USA</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://scholar.google.com/citations?user=rLDZ8cwAAAAJ&hl=en&oi=ao" class="social-link">
-              <i class="fa-brands fa-google-scholar"></i>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://github.com/Fan-Feng" class="social-link" aria-label="GitHub">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/fan-feng-004028180/" class="social-link" aria-label="LinkedIn">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-<!--
+        <!--
     - #main-content
 -->
 
-<div class="main-content">
-
-    <!--
+        <div class="main-content">
+            <!--
     - #NAVBAR
     -->
 
-    <nav class="navbar">
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="./index.html">About</a>
+                    </li>
 
-    <ul class="navbar-list">
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="./resume.html">Resume</a>
+                    </li>
 
-        <li class="navbar-item">
-        <a class="navbar-link" href="./index.html">About</a>
-        </li>
+                    <li class="navbar-item">
+                        <button class="navbar-link active" data-nav-link>Projects</button>
+                    </li>
 
-        <li class="navbar-item">
-        <a class="navbar-link" href="./resume.html">Resume</a>
-        </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="./publications.html">Publications</a>
+                    </li>
 
-        <li class="navbar-item">
-        <button class="navbar-link active" data-nav-link>Projects</button>
-        </li>
-
-        <li class="navbar-item">
-        <a class="navbar-link" href="./publications.html">Publications</a>
-        </li>
-
-        <li class="navbar-item">
-        <a class="navbar-link" href="./contact.html">Contact</a>
-        </li>
-
-    </ul>
-    </nav>
-    <!--
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="./contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--
     - #ABOUT
     -->
-  <article class="about" data-page="about">
-        <header>
-            <h2 class="h2 article-title">About me</h2>
-        </header>
-    </article>
-    <!--
+            <article class="about" data-page="about">
+                <header>
+                    <h2 class="h2 article-title">About me</h2>
+                </header>
+            </article>
+            <!--
     - #RESUME
     -->
-    <article class="resume" data-page="resume">
-    <header>
-        <h2 class="h2 article-title">Resume</h2>
-    </header>
-    </article>
+            <article class="resume" data-page="resume">
+                <header>
+                    <h2 class="h2 article-title">Resume</h2>
+                </header>
+            </article>
 
-    <!--
+            <!--
     - #projects
     -->
-  <article class="projects active" data-page="projects">
-        <header>
-          <h2 class="h2 article-title">Projects</h2>
-        </header>
+            <article class="projects active" data-page="projects">
+                <header>
+                    <h2 class="h2 article-title">Projects</h2>
+                </header>
 
-         <section class="projects">
+                <section class="projects">
+                    <ul class="filter-list">
+                        <li class="filter-item">
+                            <button class="active" data-filter-btn>All</button>
+                        </li>
 
-          <ul class="filter-list">
+                        <li class="filter-item">
+                            <button data-filter-btn>Building</button>
+                        </li>
 
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
+                        <li class="filter-item">
+                            <button data-filter-btn>AI</button>
+                        </li>
 
-            <li class="filter-item">
-              <button data-filter-btn>Building</button>
-            </li>
+                        <li class="filter-item">
+                            <button data-filter-btn>Others</button>
+                        </li>
 
-            <li class="filter-item">
-              <button data-filter-btn>AI</button>
-            </li>
+                        <li class="filter-item">
+                            <button id="sort-project-year-btn" class="btn">
+                                Start year
+                            </button>
+                        </li>
+                    </ul>
 
-            <li class="filter-item">
-              <button data-filter-btn>Others</button>
-            </li>
+                    <ul class="project-list">
+                        <li class="project-item active content-strip" data-filter-item data-category="Building">
+                            <a href="#" class="project-link-wrap">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/ResCodeAnalysis.png" alt="Building energy "
+                                        loading="lazy" />
+                                </figure>
 
-            <li class="filter-item">
-              <button id="sort-project-year-btn" class="btn">Start year</button>
-            </li>
+                                <div class="project-content">
+                                    <div class="project-title-row">
+                                        <h3 class="project-title">
+                                            Large Scale Simulation Helps States and Utilities
+                                            Enhancing Building Energy Code Adoption
+                                        </h3>
+                                        <span class="project-year">2025</span>
+                                    </div>
+                                    <p class="project-description">
+                                        "I am one of the main contributors to the Residential
+                                        Building Energy Code analysis programs, where I helped
+                                        develop the simulation infrastructure used for large-scale
+                                        building energy analysis at both the state and national
+                                        levels. Specficially, the simulation program we used are
+                                        mainly EnergyPlus, and we developed a workflow that can
+                                        atumatically generate simulation models for different
+                                        modeling parameters(building types, insulation levels
+                                        ),climate zones, and etc. The large scale simulation are
+                                        then executed using High Performance Computers. "
+                                    </p>
+                                    <div class="pub-tags">
+                                        <span class="pub-tag pub-keyword">Building</span>
+                                        <span class="pub-tag pub-keyword">EnergyPlus</span>
+                                        <span class="pub-tag pub-keyword">High Performance Computing</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
 
-          </ul>
+                        <li class="project-item active content-strip" data-filter-item data-category="Building">
+                            <a href="#" class="project-link-wrap">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/PCM_CoolingSys.png" alt="PCM" loading="lazy" />
+                                </figure>
 
-          <ul class="project-list">
+                                <div class="project-content">
+                                    <div class="project-title-row">
+                                        <h3 class="project-title">
+                                            Cost-effective Thermally Activated Building Systems with
+                                            PCM embeded radiant cooling systems to Support a Power
+                                            Grid System
+                                        </h3>
+                                        <span class="project-year">2022</span>
+                                    </div>
+                                    <p class="project-description">
+                                        (1) Design a multi-functional building envelope with both
+                                        phase change materials (PCM) and a radiant heat/cooling
+                                        system. (2) Develop and implement a simulation module for
+                                        industrial-grade PCMs in EnergyPlus. (3) Develop
+                                        control-oriented models for energy and thermal estimation
+                                        of buildings using this multi-functional panel. (4)
+                                        Develop a model-predictive control framework for this
+                                        system to optimize cost and thermal comfort. (5) Implement
+                                        the proposed control framework using high-performance
+                                        computers.
+                                    </p>
+                                    <div class="pub-tags">
+                                        <span class="pub-tag pub-keyword">Phase Change Material</span>
+                                        <span class="pub-tag pub-keyword">Data-driven models</span>
+                                        <span class="pub-tag pub-keyword">High Performance Computing</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
 
-           <li class="project-item active content-strip" data-filter-item data-category="Building">
-              <a href="#" class="project-link-wrap">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/ResCodeAnalysis.png" alt="Building energy " loading="lazy">
-                </figure>
+                        <li class="project-item active content-strip" data-filter-item data-category="web development">
+                            <div class="project-link-wrap" data-href="./projects/demo1.html" tabindex="0">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/Demo1.png" alt="web development" loading="lazy" />
+                                </figure>
 
-                <div class="project-content">
-                  <div class="project-title-row">
-                    <h3 class="project-title">Large Scale Simulation Helps States and Utilities Enhancing Building Energy Code Adoption</h3>
-                    <span class="project-year">2025</span>
-                  </div>
-                  <p class="project-description">
-                      "I am one of the main contributors to the Residential Building Energy Code analysis programs, 
-                      where I helped develop the simulation infrastructure used for large-scale building energy analysis 
-                      at both the state and national levels. Specficially, the simulation program we used are mainly EnergyPlus, and 
-                      we developed a workflow that can atumatically generate simulation models for different modeling parameters(building types, insulation levels
-                      ),climate zones, and etc. The large scale simulation are then executed using High Performance Computers. "
-                  </p>
-                  <div class="pub-tags">
-                    <span class="pub-tag pub-keyword">Building</span>
-                    <span class="pub-tag pub-keyword">EnergyPlus</span>
-                    <span class="pub-tag pub-keyword">High Performance Computing</span>
-                  </div>
-                </div>
-              </a>
-            </li>
-
-            <li class="project-item active content-strip" data-filter-item data-category="Building">
-              <a href="#" class="project-link-wrap">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/PCM_CoolingSys.png" alt="PCM" loading="lazy">
-                </figure>
-
-                <div class="project-content">
-                  <div class="project-title-row">
-                    <h3 class="project-title">Cost-effective Thermally Activated Building Systems with PCM embeded radiant cooling systems to Support a Power Grid System</h3>
-                    <span class="project-year">2022</span>
-                  </div>
-                  <p class="project-description">
-                    (1) Design a multi-functional building envelope with both phase change materials (PCM) and a radiant heat/cooling system.
-                    (2) Develop and implement a simulation module for industrial-grade PCMs in EnergyPlus.
-                    (3) Develop control-oriented models for energy and thermal estimation of buildings using this multi-functional panel.
-                    (4) Develop a model-predictive control framework for this system to optimize cost and thermal comfort.
-                    (5) Implement the proposed control framework using high-performance computers.
-                  </p>
-                  <div class="pub-tags">
-                    <span class="pub-tag pub-keyword">Phase Change Material</span>
-                    <span class="pub-tag pub-keyword">Data-driven models</span>
-                    <span class="pub-tag pub-keyword">High Performance Computing</span>
-                  </div>
-                </div>
-              </a>
-            </li>
-
-            <li class="project-item active content-strip" data-filter-item data-category="web development">
-              <div class="project-link-wrap" data-href="./projects/demo1.html" tabindex="0">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/Demo1.png" alt="web development" loading="lazy">
-                </figure>
-
-                <div class="project-content">
-                  <div class="project-title-row">
-                    <h3 class="project-title">Fan Feng's personal website</h3>
-                    <span class="project-year">2025</span>
-                  </div>
-                  <p class="project-description">
-                    This is my personal website, and it is redesigned based on  vCard's personl portfolio (https://codewithsadee.github.io/vcard-personal-portfolio/). You are also welcome to use this template.
-                  </p>
-                  <div class="pub-tags">
-                    <span class="pub-tag pub-keyword">Web development</span>
-                    <span class="pub-tag pub-keyword">CSS</span>
-                    <span class="pub-tag pub-keyword">Javascript</span>
-                  </div>
-                  <!-- explicit project details link (subpaper) -->
-                  <a class="project-subpaper-link" href="https://github.com/Fan-Feng/Fan-Feng.github.io" aria-label="Project details">Github repo</a>
-                </div>
-              </div>
-            </li>
-
-          </ul>
-
-        </section>
-
-    </article>
-    <!--
+                                <div class="project-content">
+                                    <div class="project-title-row">
+                                        <h3 class="project-title">Fan Feng's personal website</h3>
+                                        <span class="project-year">2025</span>
+                                    </div>
+                                    <p class="project-description">
+                                        This is my personal website, and it is redesigned based on
+                                        vCard's personl portfolio
+                                        (https://codewithsadee.github.io/vcard-personal-portfolio/).
+                                        You are also welcome to use this template.
+                                    </p>
+                                    <div class="pub-tags">
+                                        <span class="pub-tag pub-keyword">Web development</span>
+                                        <span class="pub-tag pub-keyword">CSS</span>
+                                        <span class="pub-tag pub-keyword">Javascript</span>
+                                    </div>
+                                    <!-- explicit project details link (subpaper) -->
+                                    <a class="project-subpaper-link"
+                                        href="https://github.com/Fan-Feng/Fan-Feng.github.io"
+                                        aria-label="Project details">Github repo</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+            <!--
     - #Publications.
     -->
-    <article class="publications" data-page="publications">
-        <header>
-            <h2 class="h2 article-title">Publications</h2>
-        </header>
-
-    <!--
-    -------------------------   write your project content here --------------------------------
-    -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </article>
-    <!--
+            <article class="publications" data-page="publications">
+                <header>
+                    <h2 class="h2 article-title">Publications</h2>
+                </header>
+            </article>
+            <!--
     - #CONTACT
     -->
-    <article class="contact" data-page="contact">
-        <header>
-            <h2 class="h2 article-title">Contact</h2>
-        </header>
-    </article>
+            <article class="contact" data-page="contact">
+                <header>
+                    <h2 class="h2 article-title">Contact</h2>
+                </header>
+            </article>
+        </div>
+    </main>
 
-</div>
-
-</main>
-
-
-
-
-
-
-  <!--
+    <!--
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 
-  <!--
+    <!--
     - ionicon link
   -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
