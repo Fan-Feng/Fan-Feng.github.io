@@ -317,3 +317,25 @@ if (sortProjectYearBtn) {
     sortProjectsByYear(descending);
   });
 }
+
+// Make div-based project-link-wrap elements navigable while allowing inner <a> to function.
+document.addEventListener('DOMContentLoaded', function () {
+  const wrappers = document.querySelectorAll('.project-link-wrap[data-href]');
+  wrappers.forEach(w => {
+    // click opens the data-href unless the click target is an anchor
+    w.addEventListener('click', function (e) {
+      const anchor = e.target.closest('a');
+      if (anchor && w.contains(anchor) && anchor !== w) return; // let inner <a> handle it
+      const href = w.getAttribute('data-href');
+      if (href) window.open(href, '_blank');
+    });
+
+    // keyboard accessibility: Enter activates
+    w.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        const href = w.getAttribute('data-href');
+        if (href) window.open(href, '_blank');
+      }
+    });
+  });
+});
