@@ -30,6 +30,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
@@ -155,7 +159,7 @@
                     </li>
 
                     <li class="navbar-item">
-                        <button class="navbar-link active" data-nav-link>Projects</button>
+                        <a class="navbar-link active" href="../projects.html">Projects</a>
                     </li>
 
                     <li class="navbar-item">
@@ -178,8 +182,77 @@
                 <header>
                     <h2 class="h2 article-title">Projects</h2>
                 </header>
+                <div id="project_content" class="project-body">
+                    <p> Fan Feng personal website</p>
 
-            </article> 
+                    <div id="MK_content" class="markdown-body">
+
+This website is redesigned based on vCard's personl portfolio
+(https://codewithsadee.github.io/vcard-personal-portfolio/). Welcome to use this as template for
+your site.
+
+
+## Demo
+
+![Desktop Demo](../assets/images/Demo1.png "Desktop Demo")
+
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating
+system.
+
+## Installing this website
+
+To install this, follow these steps:
+
+Linux and macOS:
+
+```bash
+sudo git clone https://github.com/Fan-Feng/Fan-Feng.github.io.git folder_name
+```
+
+Windows:
+
+```bash
+git clone https://github.com/Fan-Feng/Fan-Feng.github.io.git folder.name
+```
+
+## Contact
+
+If you want to contact me you can reach me at fengfan6696@gmail.com
+
+## License
+
+MIT
+
+                    </div>
+                </div>
+
+
+                <script>
+                    (function () {
+                        const content = document.getElementById('MK_content');
+                        if (!content) return;
+
+                        // Configure marked for GitHub-flavored markdown
+                        marked.setOptions({ gfm: true, breaks: true, headerIds: true });
+
+                        const markdown = content.textContent || '';
+                        let html = marked.parse(markdown);
+
+                        // sanitize if DOMPurify is available
+                        if (window.DOMPurify) html = DOMPurify.sanitize(html);
+
+                        content.innerHTML = html;
+
+                        // highlight code blocks if highlight.js is available
+                        if (window.hljs) hljs.highlightAll();
+                    })();
+                </script>
+
+            </article>
         </div>
     </main>
 
@@ -193,6 +266,8 @@
   -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
 </body>
 
 </html>
